@@ -23,9 +23,10 @@
                 type="jp.demo.action.UserAction"
                 name="userForm"
                 scope="request"
-                input="/index.jsp">
-            <forward name="ok" path="/user.jsp" />
+                input="/user.jsp">
+            <forward name="ok" path="/index.jsp" />
         </action>
+        
 
     </action-mappings>
 

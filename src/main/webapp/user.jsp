@@ -1,4 +1,4 @@
-<%@page contentType="text/html; charset=Windows-31J"%>
+<%@page contentType="text/html; charset=Shift_JIS"%>
 <%@ taglib uri="/tags/struts-bean" prefix="bean" %>
 <%@ taglib uri="/tags/struts-html" prefix="html" %>
 <%@ taglib uri="/tags/struts-logic" prefix="logic" %>
@@ -12,7 +12,7 @@ user body.
 
 <html:form action="/user">
 
-名前：<input type="text" name="name"><br>
+名前：<html:text property="name"/><br>
 <html:submit value="submit" />
 
 </html:form>

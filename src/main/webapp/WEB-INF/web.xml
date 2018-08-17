@@ -7,6 +7,15 @@
 <web-app>
   <display-name>Struts Blank Application</display-name>
   
+  <filter>
+        <filter-name>characterEncodingFilter</filter-name>
+        <filter-class>jp.demo.filter.CharaFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>characterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+  
   <!-- Standard Action Servlet Configuration (with debugging) -->
   <servlet>
     <servlet-name>action</servlet-name>
