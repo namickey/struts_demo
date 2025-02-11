@@ -9,9 +9,14 @@ targetCompatibility = 1.8
 
 def defaultEncoding = 'Windows-31j'
 
+configurations {
+    provided
+}
+
 buildscript {
     repositories {
         jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -29,7 +34,7 @@ tomcat{
 
 dependencies {
     compile fileTree(dir: './lib', includes: ['*.jar'])
-    compileOnly ("javax.servlet:javax.servlet-api:3.0.1")
+    compileOnly 'javax.servlet:javax.servlet-api:3.0.1'
     def tomcatVersion = '7.0.85'
     tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
             "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}",
